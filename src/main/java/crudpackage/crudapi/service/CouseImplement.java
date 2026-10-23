@@ -74,6 +74,16 @@ public class CouseImplement implements Courseservice {
         }
     }
 
+    @Override
+    public String Deletestudentlogic(int studentid){
+        Optional<Coursemodel> getdata=courseRepostiory.findById(studentid);// select * from course where studentid=?
+        if(getdata.isPresent()){
+            courseRepostiory.deleteByStudentid(studentid);// delete * from course where studentid=?;
+            return "student id:"+studentid+" is deleted";
+        }else {
+            return "student id:"+studentid+" is not present in database";
+        }
+    }
 
 
 }

@@ -11,4 +11,6 @@ public interface Courseservice {
     List<CourseDTO> Coursedisplayall();
 //    String AdminAddlogic(AdminDTO adminDTO);
 public String Updatecouselogic(CourseDTO courseDTO);
+
+    public String Deletestudentlogic(int studentid);
 }

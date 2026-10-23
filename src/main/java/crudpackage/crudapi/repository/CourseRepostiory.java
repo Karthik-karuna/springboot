@@ -8,8 +8,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CourseRepostiory extends JpaRepository<Coursemodel,Integer> {
 
-//   @Transactional
-//    void deleteByStudentid
+   @Transactional
+    void deleteByStudentid(int studentid);
+
 
 
 }

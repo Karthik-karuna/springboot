@@ -39,4 +39,10 @@ public class CourseController {
         String response=courseservice.Updatecouselogic(courseDTO);
         return ResponseEntity.ok(response);
     }
+
+    @DeleteMapping("/deletecourse/{studentid}")
+    public  ResponseEntity<String> Deletecourseapi(@PathVariable(name = "studentid") int studentid){
+        String response=courseservice.Deletestudentlogic(studentid);
+        return  ResponseEntity.ok(response);
+    }
 }
